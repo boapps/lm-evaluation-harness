@@ -1,0 +1,18 @@
+task: vikwiki
+dataset_path: boapps/vikwiki-qa
+output_type: multiple_choice
+doc_to_text: "Kérdés: {{question}}\nVálasz:"
+doc_to_target: correct_answer
+doc_to_choice: "{{answers}}"
+training_split: train
+validation_split: null
+test_split: test
+metric_list:
+  - metric: acc
+    aggregation: mean
+    higher_is_better: true
+  - metric: acc_norm
+    aggregation: mean
+    higher_is_better: true
+metadata:
+  version: 1.0

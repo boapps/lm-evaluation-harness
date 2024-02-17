@@ -1,0 +1,19 @@
+group: hulu
+task: huwnli
+dataset_path: NYTK/HuWNLI
+output_type: multiple_choice
+training_split: train
+test_split: validation
+validation_split: null
+doc_to_text: "{{sentence1}}\nKérdés: {{sentence2}} Igaz vagy Hamis?\nVálasz:"
+doc_to_target: "{{int(Label)-1}}"
+doc_to_choice: ["Hamis", "Igaz"]
+metric_list:
+  - metric: acc
+    aggregation: mean
+    higher_is_better: true
+  - metric: acc_norm
+    aggregation: mean
+    higher_is_better: true
+metadata:
+  version: 2.0

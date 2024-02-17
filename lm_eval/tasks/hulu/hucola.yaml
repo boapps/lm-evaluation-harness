@@ -1,0 +1,14 @@
+group: hulu
+task: hucola
+dataset_path: NYTK/HuCOLA
+output_type: multiple_choice
+training_split: train
+test_split: validation
+validation_split: null
+doc_to_text: "{{Sent}}\nKérdés: Van értelme ennek a mondatnak?\nVálasz:"
+doc_to_target: '{{["0", "1"].index(Label)}}'
+doc_to_choice: ["nem", "igen"]
+metric_list:
+  - metric: mcc
+metadata:
+  version: 1.0
