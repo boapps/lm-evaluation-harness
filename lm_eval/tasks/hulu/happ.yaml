@@ -10,8 +10,8 @@ training_split: train
 test_split: test
 validation_split: null
 doc_to_text: "{{sent}}\nKérdés: {{question}}\nVálasz:"
-doc_to_target: '{{["{{answerA}}", "{{answerB}}"].index(correct)}}'
-doc_to_choice: ["{{answerA}}", "{{answerB}}"]
+doc_to_target: correct
+doc_to_choice: [answerA, answerB]
 metric_list:
   - metric: acc
     aggregation: mean

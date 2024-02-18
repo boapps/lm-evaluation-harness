@@ -1,6 +1,8 @@
 group: hulu
 task: hucola
 dataset_path: NYTK/HuCOLA
+dataset_kwargs:
+  field: 'data'
 output_type: multiple_choice
 training_split: train
 test_split: validation

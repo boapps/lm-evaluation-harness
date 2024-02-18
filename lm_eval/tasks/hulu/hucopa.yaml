@@ -1,6 +1,11 @@
 group: hulu
 task: hucopa
 dataset_path: NYTK/HuCoPA
+dataset_kwargs:
+  data_files:
+    train: data/train.json
+    validation: data/val.json
+
 output_type: multiple_choice
 training_split: train
 test_split: validation

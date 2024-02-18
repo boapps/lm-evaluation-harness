@@ -1,4 +1,4 @@
-group: hulu
+#group: hulu
 task: huwnli
 dataset_path: NYTK/HuWNLI
 output_type: multiple_choice
